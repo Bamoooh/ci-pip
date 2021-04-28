@@ -29,4 +29,16 @@ jobs:
     steps:
       - checkout
       - run: npm run analyze
-        
+
+workflows:
+  version: 2
+  b-a-t:
+    jobs:
+    - build
+    - analyze:
+        requires: 
+          - build
+    - test:
+        requires:
+          - analyze
+
