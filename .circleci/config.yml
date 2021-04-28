@@ -28,7 +28,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: npm run analyze
+      - run: npm run audit
 
 workflows:
   version: 2
