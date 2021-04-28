@@ -35,10 +35,10 @@ workflows:
   b-a-t:
     jobs:
     - build
-    - analyze:
+    - test:
         requires: 
           - build
-    - test:
+    - analyze:
         requires:
-          - analyze
+          - test
 
